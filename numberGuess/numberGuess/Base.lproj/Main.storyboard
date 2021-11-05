@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uX7-sE-8Cq">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -8,7 +8,23 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="7KT-nc-unT">
+            <objects>
+                <navigationController id="uX7-sE-8Cq" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PuH-Pz-hDh">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="6pS-nJ-jFp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1x0-jO-vQy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-864" y="88"/>
+        </scene>
+        <!--Rate mal-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="numberGuess" customModuleProvider="target" sceneMemberID="viewController">
@@ -38,6 +54,14 @@
                                     <action selector="editingChangeTextField:" destination="BYZ-38-t0r" eventType="editingChanged" id="Uoc-cc-DNa"/>
                                 </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jMR-Dy-wHr">
+                                <rect key="frame" x="184" y="848" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="xFg-eg-bpc"/>
+                                    <constraint firstAttribute="width" constant="46" id="zfV-D8-09x"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -47,11 +71,14 @@
                             <constraint firstItem="Srn-Es-WMP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C7f-HD-JeL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="N9q-wp-iEu" secondAttribute="trailing" constant="20" id="Eu0-VH-wEe"/>
                             <constraint firstItem="N9q-wp-iEu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="VXU-rQ-Zdc"/>
+                            <constraint firstItem="jMR-Dy-wHr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vzw-rJ-mIO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="P5b-UJ-tPe" secondAttribute="bottom" constant="290" id="boD-vj-ev4"/>
+                            <constraint firstAttribute="bottom" secondItem="jMR-Dy-wHr" secondAttribute="bottom" constant="18" id="e2I-6f-nAR"/>
                             <constraint firstItem="N9q-wp-iEu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="knr-NS-3Gd"/>
                             <constraint firstItem="N9q-wp-iEu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="sM9-3c-RZH"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Rate mal" id="dcU-Qh-xiq"/>
                     <connections>
                         <outlet property="guessMeButton" destination="P5b-UJ-tPe" id="FUT-d2-q6e"/>
                         <outlet property="numberTextField" destination="N9q-wp-iEu" id="Bmo-bH-VhP"/>
