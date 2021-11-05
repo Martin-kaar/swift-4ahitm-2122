@@ -22,14 +22,18 @@ class ViewController: UIViewController {
         let guessedNumber = model.compareString(guess:numberTextField.text!)
 //TODO: check input for not nill
         let text: String?
+        var checkSegue: Bool = false
 
         switch model.compare(guess: guessedNumber) {
         case -1:
             text = "Zu klein"
+            checkSegue = false
         case 1:
             text = "zu groß"
+            checkSegue = false
         default:
             text = "Hurra!!!"
+            checkSegue = true
         }
         solutionLabel.text = text
         
@@ -45,5 +49,10 @@ class ViewController: UIViewController {
     }
 
 
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        print ("nein")
+        return false
+    }
+    
 }
 
